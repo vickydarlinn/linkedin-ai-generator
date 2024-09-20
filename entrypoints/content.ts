@@ -28,7 +28,33 @@ export default defineContentScript({
 
         function handleClick() {
           console.log("Button clicked");
-          browser.runtime.sendMessage({ message: Date.now() });
+          // Create modal structure
+          const modal = document.createElement("div");
+          modal.className = "custom-modal";
+          modal.innerHTML = `
+          <div class="modal-overlay">
+            <div class="custom-modal-content" >
+              <span class="close-button">&times;</span>
+              <h2>Modal Title</h2>
+              <p>This is the content inside the modal.</p>
+              <button class="close-modal">Close Modal</button>
+            </div>
+          </div>
+          `;
+          // Append modal to body
+          document.body.appendChild(modal);
+
+          // Close modal on click of close button
+          const closeModalButton = modal.querySelector(".close-button");
+          closeModalButton?.addEventListener("click", () => {
+            modal.remove(); // Remove modal from the DOM
+          });
+
+          const closeModal = modal.querySelector(".close-modal");
+          closeModal?.addEventListener("click", () => {
+            modal.remove(); // Remove modal from the DOM
+          });
+
           console.log("Sending message through button");
         }
       }
