@@ -1,6 +1,9 @@
+import "./style.css";
+
 export default defineContentScript({
-  matches: ["*://*.google.com/*"],
-  main() {
-    console.log("Hello content.");
+  matches: ["*://*.linkedin.com/messaging/*"],
+
+  main(ctx) {
+    console.log("This is LinkedIn message URL");
   },
 });
