@@ -1,0 +1,8 @@
+.msg-form__contenteditable {
+  position: relative;
+}
+.custom-send-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
