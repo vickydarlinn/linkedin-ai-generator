@@ -1,0 +1,14 @@
+.msg-form__contenteditable {
+  position: relative;
+}
+.custom-send-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  width: 15px;
+  height: auto;
+}
+.custom_btn {
+  border: 1px solid #6b7280 !important;
+}
