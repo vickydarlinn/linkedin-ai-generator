@@ -49,6 +49,12 @@ export default function Modal({ isOpen, onClose, onInsert }: ModalProps) {
     onInsert(messages);
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && messages.length === 0) {
+      handleGenerate();
+    }
+  };
+
   return (
     isOpen && (
       <div
@@ -77,7 +83,9 @@ export default function Modal({ isOpen, onClose, onInsert }: ModalProps) {
             type="text"
             className="bg-white w-full p-1 px-2 rounded-md !outline-none !border !border-black  focus:!outline-none focus:!border-none"
             placeholder="Your Prompt"
+            onKeyDown={handleKeyPress}
             value={prompt}
+            autoFocus
             onChange={(e) => setPrompt(e.target.value)}
           />
           <div className="flex justify-end pt-4 gap-3 ">
