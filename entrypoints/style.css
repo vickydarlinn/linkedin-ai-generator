@@ -20,4 +20,30 @@
 }
 .custom-modal-content {
   background-color: white;
+  max-width: 500px;
+}
+.messages {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+.message {
+  border: 1px solid gray;
+  max-width: 80%;
+}
+.left {
+  margin-right: auto;
+}
+.right {
+  margin-left: auto;
+}
+.btn {
+  border: 1px solid black;
+  padding: 4px;
+  margin: 5px;
+}
+
+.display-none {
+  display: none;
 }
