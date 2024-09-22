@@ -5,8 +5,6 @@ This is a Chrome extension that runs on LinkedIn and assists users in generating
 
 ## Live Demo
 
-here video will come
-
 
 https://github.com/user-attachments/assets/5170afde-b24f-4273-bca3-204f0b041d21
 
